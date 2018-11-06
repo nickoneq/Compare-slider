@@ -1,0 +1,55 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #000;
+}
+
+.image-comparison {
+	position: relative;
+	display: inline-block;
+	width: 800px;
+	overflow: hidden;
+}
+
+.image-comparison__before {
+	position: absolute;
+	width: 50%;
+	overflow: hidden;
+}
+
+.image-comparison__image {
+	display: block;
+}
+
+.image-comparison__slider {
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 2px;
+	height: 100%;
+	background-color: #fff;
+	cursor: col-resize;
+	outline: none;
+}
+
+.image-comparison__slider::before {
+	content: "";
+	position: absolute;
+	top: calc(50% 15px);
+	left: -14px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+.image-comparison__slider:hover,
+.image-comparison__slider:focus,
+.image-comparison__slider:hover::before,
+.image-comparison__slider:focus::before {
+	background-color: #ccc;
+}
